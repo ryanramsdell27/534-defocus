@@ -1,8 +1,11 @@
-img = imread('im0.png');
+img = imread('person.jpg');
 face = [13,14];
+
+for x = 1:10
 img_s = segment(img, face);
 img_lab = label2rgb(img_s);
-imshow(img_lab);
+imwrite(img_lab, strcat('output/british_rail', num2str(x),'.jpg'));
+end
 % imshow(img_s);
 
 
