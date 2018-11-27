@@ -1,0 +1,26 @@
+[0] Config.pm:302> INFO - This is Biber 2.10
+[0] Config.pm:305> INFO - Logfile is 'paper.blg'
+[43] biber-darwin:313> INFO - === Wed Oct 31, 2018, 23:39:20
+[72] Biber.pm:371> INFO - Reading 'paper.bcf'
+[233] Biber.pm:857> INFO - Found 15 citekeys in bib section 0
+[249] Biber.pm:3976> INFO - Processing section 0
+[261] Biber.pm:4136> INFO - Looking for bibtex format file 'resources.bib' for section 0
+[264] bibtex.pm:1490> INFO - LaTeX decoding ...
+[303] bibtex.pm:1306> INFO - Found BibTeX data source 'resources.bib'
+[311] Utils.pm:193> WARN - month field 'Aug' in entry 'Nayar1994' is not an integer - this will probably not sort properly.
+[318] Utils.pm:193> WARN - month field 'Apr' in entry 'Favaro2003' is not an integer - this will probably not sort properly.
+[322] Utils.pm:193> WARN - Range field 'pages' in entry 'Longuet-Higgins1981' is malformed, falling back to literal
+[327] Utils.pm:193> WARN - month field 'Apr' in entry 'Scharstein2002' is not an integer - this will probably not sort properly.
+[336] Utils.pm:193> WARN - month field 'Apr' in entry 'Hirschmuller2002' is not an integer - this will probably not sort properly.
+[369] Utils.pm:193> WARN - Range field 'pages' in entry 'Battiato2004' is malformed, falling back to literal
+[397] Utils.pm:193> WARN - month field 'April' in entry 'Hernandez2014' is not an integer - this will probably not sort properly.
+[403] Utils.pm:193> WARN - month field 'June' in entry 'Scharstein2003' is not an integer - this will probably not sort properly.
+[408] Utils.pm:193> WARN - month field 'June' in entry 'Scharstein2007' is not an integer - this will probably not sort properly.
+[452] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[452] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[452] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[452] Biber.pm:3804> INFO - Sorting list 'cms/global//global/global' of type 'entry' with template 'cms' and locale 'en-US'
+[452] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[475] bbl.pm:617> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[483] bbl.pm:720> INFO - Output to paper.bbl
+[483] Biber.pm:110> INFO - WARNINGS: 9

@@ -1,0 +1,690 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global}
+    \entry{Battiato2004}{article}{}
+      \name{author}{5}{}{%
+        {{hash=469c71a64d7081188bc6317cde4248c8}{%
+           family={Battiato},
+           familyi={B\bibinitperiod},
+           given={Sebastiano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b6c6ab233fdba666633cb353bc37a8ae}{%
+           family={Curti},
+           familyi={C\bibinitperiod},
+           given={Salvatore},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ae17b96d63c710d7943d67cda354bfae}{%
+           family={La\bibnamedelima Cascia},
+           familyi={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2bb3c41281e3e4080ef4f30208e03c1e}{%
+           family={Tortora},
+           familyi={T\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d9120a64fa50544c1927e76ba6b0591d}{%
+           family={Scordato},
+           familyi={S\bibinitperiod},
+           given={Emiliano},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{be19ecfe085dbca2a2bb666a7f313447}
+      \strng{fullhash}{4db8e1792760a2d1a20ac20014887b3c}
+      \strng{bibnamehash}{4db8e1792760a2d1a20ac20014887b3c}
+      \strng{authorbibnamehash}{4db8e1792760a2d1a20ac20014887b3c}
+      \strng{authornamehash}{be19ecfe085dbca2a2bb666a7f313447}
+      \strng{authorfullhash}{4db8e1792760a2d1a20ac20014887b3c}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc.SPIE}
+      \field{title}{Depth map generation by image classification}
+      \field{volume}{5302}
+      \field{year}{2004}
+      \field{pages}{5302-5302-10}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1117/12.526634
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Battiato2004' is malformed, falling back to literal}
+    \endentry
+    \entry{Favaro2003}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b1d1b13c4b9716d6be01da64169529ff}{%
+           family={Favaro},
+           familyi={F\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1dec54b7c004fca45114c075a9894cb5}{%
+           family={Mennucci},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d00582fbd862d4b2cc3cbaab733439b5}{%
+           family={Soatto},
+           familyi={S\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea1db9db500339989b541e4be619dc47}
+      \strng{fullhash}{ea1db9db500339989b541e4be619dc47}
+      \strng{bibnamehash}{ea1db9db500339989b541e4be619dc47}
+      \strng{authorbibnamehash}{ea1db9db500339989b541e4be619dc47}
+      \strng{authornamehash}{ea1db9db500339989b541e4be619dc47}
+      \strng{authorfullhash}{ea1db9db500339989b541e4be619dc47}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accommodation cues are measurable properties of an image that are associated with a change in the geometry of the imaging device. To what extent can three-dimensional shape be reconstructed using accommodation cues alone? This question is fundamental to the problem of reconstructing shape from focus (SFF) and shape from defocus (SFD) for applications in inspection, microscopy, image restoration and visualization. We address it by studying the ``observability'' of accommodation cues in an analytical framework that reveals under what conditions shape can be reconstructed from defocused images. We do so in three steps: (1) we characterize the observability of any surface in the presence of a controlled radiance (``weak observability''), (2) we conjecture the existence of a radiance that allows distinguishing any two surfaces (``sufficient excitation'') and (3) we show that in the absence of any prior knowledge on the radiance, two surfaces can be distinguished up to the degree of resolution determined by the complexity of the radiance (``strong observability''). We formulate the problem of reconstructing the shape and radiance of a scene as the minimization of the information divergence between blurred images, and propose an algorithm that is provably convergent and guarantees that the solution is admissible, in the sense of corresponding to a positive radiance and imaging kernel.}
+      \field{issn}{1573-1405}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Observing Shape from Defocused Images}
+      \field{volume}{52}
+      \field{year}{2003}
+      \field{pages}{25\bibrangedash 43}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1023/A:1022366408068
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1022366408068
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1022366408068
+      \endverb
+    \endentry
+    \entry{Garcia2017}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=e992311b7be6e757303574f934e9b809}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={Kleber},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Los Angeles, California}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{e992311b7be6e757303574f934e9b809}
+      \strng{fullhash}{e992311b7be6e757303574f934e9b809}
+      \strng{bibnamehash}{e992311b7be6e757303574f934e9b809}
+      \strng{authorbibnamehash}{e992311b7be6e757303574f934e9b809}
+      \strng{authornamehash}{e992311b7be6e757303574f934e9b809}
+      \strng{authorfullhash}{e992311b7be6e757303574f934e9b809}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM SIGGRAPH 2017 Talks}
+      \field{isbn}{978-1-4503-5008-2}
+      \field{series}{SIGGRAPH '17}
+      \field{title}{Circular Separable Convolution Depth of Field}
+      \field{year}{2017}
+      \field{pages}{16:1\bibrangedash 16:2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3084363.3085022
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/3084363.3085022
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/3084363.3085022
+      \endverb
+      \keyw{bokeh,complex phasors,depth of field,post effects,separability}
+    \endentry
+    \entry{Hernandez2014}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0ca2a8f05328559f821cbfaf9a5abed2}{%
+           family={Hernández},
+           familyi={H\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google AI Blog}%
+      }
+      \strng{namehash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \strng{fullhash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \strng{bibnamehash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \strng{authorbibnamehash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \strng{authornamehash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \strng{authorfullhash}{0ca2a8f05328559f821cbfaf9a5abed2}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Lens Blur in the New Google Camera App}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html
+      \endverb
+      \verb{url}
+      \verb https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html
+      \endverb
+    \endentry
+    \entry{Hirschmuller2002}{article}{}
+      \name{author}{3}{}{%
+        {{hash=07822885a7195ea6c53f2a2a4eb076a4}{%
+           family={Hirschm{ü}ller},
+           familyi={H\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4ddb5ba3d8dd99e2ea0ef21cf6004290}{%
+           family={Innocent},
+           familyi={I\bibinitperiod},
+           given={Peter\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=8d81d021ae2a3664f385bb0bafd99f26}{%
+           family={Garibaldi},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \strng{fullhash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \strng{bibnamehash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \strng{authorbibnamehash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \strng{authornamehash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \strng{authorfullhash}{d4aed554a9d5f4358b4e00d0cad5ed04}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper describes a real-time stereo vision system that is required to support high-level object based tasks in a tele-operated environment. Stereo vision is computationally expensive, due to having to find corresponding pixels. Correlation is a fast, standard way to solve the correspondence problem. This paper analyses the behaviour of correlation based stereo to find ways to improve its quality while maintaining its real-time suitability. Three methods are suggested. Two of them aim to improve the disparity image especially at depth discontinuities, while one targets the identification of possible errors in general. Results are given on real stereo images with ground truth. A comparison with five standard correlation methods is provided. All proposed algorithms are described in detail and performance issues and optimisation are discussed. Finally, performance results of individual parts of the stereo algorithm are shown, including rectification, filtering andcorrelation using all proposed methods. The implemented system shows that errors of simple stereo correlation, especially in object border regions, can be reduced in real-time using non-specialised computer hardware.}
+      \field{issn}{1573-1405}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Real-Time Correlation-Based Stereo Vision with Reduced Border Errors}
+      \field{volume}{47}
+      \field{year}{2002}
+      \field{pages}{229\bibrangedash 246}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1023/A:1014554110407
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1014554110407
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1014554110407
+      \endverb
+    \endentry
+    \entry{Hirschmuller2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=07822885a7195ea6c53f2a2a4eb076a4}{%
+           family={Hirschm{ü}ller},
+           familyi={H\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b14ac2b508357476f1391a183a077ab3}{%
+           family={Scharstein},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \strng{fullhash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \strng{bibnamehash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \strng{authorbibnamehash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \strng{authornamehash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \strng{authorfullhash}{45d1e1dc8bed3b95fb82f39e36fa2152}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2007 IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{title}{Evaluation of Cost Functions for Stereo Matching}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{Longuet-Higgins1981}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4c20edd17d3e8e55619e72b00a756336}{%
+           family={Longuet-Higgins},
+           familyi={L\bibinithyphendelim H\bibinitperiod},
+           given={H.\bibnamedelimi C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group SN -}%
+      }
+      \strng{namehash}{4c20edd17d3e8e55619e72b00a756336}
+      \strng{fullhash}{4c20edd17d3e8e55619e72b00a756336}
+      \strng{bibnamehash}{4c20edd17d3e8e55619e72b00a756336}
+      \strng{authorbibnamehash}{4c20edd17d3e8e55619e72b00a756336}
+      \strng{authornamehash}{4c20edd17d3e8e55619e72b00a756336}
+      \strng{authorfullhash}{4c20edd17d3e8e55619e72b00a756336}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{09}
+      \field{title}{A computer algorithm for reconstructing a scene from two projections}
+      \field{volume}{293}
+      \field{year}{1981}
+      \field{pages}{133 EP -}
+      \range{pages}{-1}
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/293133a0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/293133a0
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Longuet-Higgins1981' is malformed, falling back to literal}
+    \endentry
+    \entry{Nayar1994}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dbf6c514d3de0b1722f721b6c36059d4}{%
+           family={Nayar},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b1eddf281f8bb2d4c3ce9ef578ba1b77}{%
+           family={Nakagawa},
+           familyi={N\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f9285ca0bff786a6ec853538ba16b171}
+      \strng{fullhash}{f9285ca0bff786a6ec853538ba16b171}
+      \strng{bibnamehash}{f9285ca0bff786a6ec853538ba16b171}
+      \strng{authorbibnamehash}{f9285ca0bff786a6ec853538ba16b171}
+      \strng{authornamehash}{f9285ca0bff786a6ec853538ba16b171}
+      \strng{authorfullhash}{f9285ca0bff786a6ec853538ba16b171}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-8828}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{month}{8}
+      \field{number}{8}
+      \field{title}{Shape from focus}
+      \field{volume}{16}
+      \field{year}{1994}
+      \field{pages}{824\bibrangedash 831}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/34.308479
+      \endverb
+      \keyw{image sequences;image texture;shape from focus method;sum-modified-Laplacian operator;image focus quality;depth estimation algorithm;optical microscope;accuracy;robustness;visual inspection tasks;Focusing;Rough surfaces;Surface roughness;Optical imaging;Optical microscopy;Layout;Image sequences;Shape measurement;Surface texture;Machine vision}
+    \endentry
+    \entry{Niemitalo2010}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=178a10e8aadbb2b322f849c79da44e13}{%
+           family={Niemitalo},
+           familyi={N\bibinitperiod},
+           given={Ollie},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{178a10e8aadbb2b322f849c79da44e13}
+      \strng{fullhash}{178a10e8aadbb2b322f849c79da44e13}
+      \strng{bibnamehash}{178a10e8aadbb2b322f849c79da44e13}
+      \strng{authorbibnamehash}{178a10e8aadbb2b322f849c79da44e13}
+      \strng{authornamehash}{178a10e8aadbb2b322f849c79da44e13}
+      \strng{authorfullhash}{178a10e8aadbb2b322f849c79da44e13}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Circularly symmetric convolution and lens blur}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb htpp://yehar.com/blog/?p=1495
+      \endverb
+      \verb{url}
+      \verb htpp://yehar.com/blog/?p=1495
+      \endverb
+    \endentry
+    \entry{Scharstein2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=4136d04ab5918bf4a1db04efc30a1940}{%
+           family={Scharstein},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f354167bdc3158e9567c79bf82ea83ef}{%
+           family={Pal},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \strng{fullhash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \strng{bibnamehash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \strng{authorbibnamehash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \strng{authornamehash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \strng{authorfullhash}{cd03afd2b67c79de5b2f88f141a608b8}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2007 IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{issn}{1063-6919}
+      \field{month}{6}
+      \field{title}{Learning Conditional Random Fields for Stereo}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CVPR.2007.383191
+      \endverb
+      \keyw{image colour analysis;probability;random processes;stereo image processing;conditional random fields;stereo vision algorithm;color change;object boundary;probabilistic model;real image;ground-truth disparities;Stereo vision;Costs;Learning systems;Training data;Minimization methods;Markov random fields;Optimization methods;Belief propagation;Educational institutions;Intensity modulation}
+    \endentry
+    \entry{Scharstein2003}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=4136d04ab5918bf4a1db04efc30a1940}{%
+           family={Scharstein},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e76f30ef1c310c5ed7b10882c66ff48f}{%
+           family={Szeliski},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8b48e7c06a3428200845e314e72dc5d}
+      \strng{fullhash}{e8b48e7c06a3428200845e314e72dc5d}
+      \strng{bibnamehash}{e8b48e7c06a3428200845e314e72dc5d}
+      \strng{authorbibnamehash}{e8b48e7c06a3428200845e314e72dc5d}
+      \strng{authornamehash}{e8b48e7c06a3428200845e314e72dc5d}
+      \strng{authorfullhash}{e8b48e7c06a3428200845e314e72dc5d}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2003 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2003. Proceedings.}
+      \field{issn}{1063-6919}
+      \field{month}{6}
+      \field{title}{High-accuracy stereo depth maps using structured light}
+      \field{volume}{1}
+      \field{year}{2003}
+      \field{pages}{I\bibrangedash I}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2003.1211354
+      \endverb
+      \keyw{stereo image processing;computer vision;cameras;image texture;high-accuracy stereo depth map;structured light;stereo data set;image acquisition;disparity computation;range sensing system;high-complexity stereo image pair acquisition;pixel-accurate correspondence information;light source calibration;registered disparity map;illumination projector;stereo algorithm evaluation;Layout;Pixel;Testing;Digital cameras;Stereo vision;Educational institutions;Calibration;Light sources;Lighting;Image databases}
+    \endentry
+    \entry{Scharstein2014}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=b14ac2b508357476f1391a183a077ab3}{%
+           family={Scharstein},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=07822885a7195ea6c53f2a2a4eb076a4}{%
+           family={Hirschm{ü}ller},
+           familyi={H\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3c1a7a65058ed64e6457ead3ead47563}{%
+           family={Kitajima},
+           familyi={K\bibinitperiod},
+           given={York},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=90622a6eba3f9288179502233d795035}{%
+           family={Krathwohl},
+           familyi={K\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6a6c808b784619c871fd68c8d8645ba8}{%
+           family={Nesic},
+           familyi={N\bibinitperiod},
+           given={Nera},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f2e5f45a009e71ca581b562c25df1b47}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=afd34fbf02a6e2bb56396a43c02d2cda}{%
+           family={Westling},
+           familyi={W\bibinitperiod},
+           given={Porter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe7a41bb58abd2c07b293715c4191a89}
+      \strng{fullhash}{f1a0c9d8a28f3c463630406162450d04}
+      \strng{bibnamehash}{f1a0c9d8a28f3c463630406162450d04}
+      \strng{authorbibnamehash}{f1a0c9d8a28f3c463630406162450d04}
+      \strng{authornamehash}{fe7a41bb58abd2c07b293715c4191a89}
+      \strng{authorfullhash}{f1a0c9d8a28f3c463630406162450d04}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{GCPR}
+      \field{title}{High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth}
+      \field{year}{2014}
+    \endentry
+    \entry{Scharstein2002}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b14ac2b508357476f1391a183a077ab3}{%
+           family={Scharstein},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f2e556c93256e7d70895d67702e14f1a}{%
+           family={Szeliski},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc399ebc50d55b700885fa232816ba92}
+      \strng{fullhash}{bc399ebc50d55b700885fa232816ba92}
+      \strng{bibnamehash}{bc399ebc50d55b700885fa232816ba92}
+      \strng{authorbibnamehash}{bc399ebc50d55b700885fa232816ba92}
+      \strng{authornamehash}{bc399ebc50d55b700885fa232816ba92}
+      \strng{authorfullhash}{bc399ebc50d55b700885fa232816ba92}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Stereo matching is one of the most active research areas in computer vision. While a large number of algorithms for stereo correspondence have been developed, relatively little work has been done on characterizing their performance. In this paper, we present a taxonomy of dense, two-frame stereo methods. Our taxonomy is designed to assess the different components and design decisions made in individual stereo algorithms. Using this taxonomy, we compare existing stereo methods and present experiments evaluating the performance of many different variants. In order to establish a common software platform and a collection of data sets for easy evaluation, we have designed a stand-alone, flexible C++ implementation that enables the evaluation of individual components and that can easily be extended to include new algorithms. We have also produced several new multi-frame stereo data sets with ground truth and are making both the code and data sets available on the Web. Finally, we include a comparative evaluation of a large set of today's best-performing stereo algorithms.}
+      \field{issn}{1573-1405}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{A Taxonomy and Evaluation of Dense Two-Frame Stereo Correspondence Algorithms}
+      \field{volume}{47}
+      \field{year}{2002}
+      \field{pages}{7\bibrangedash 42}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1023/A:1014573219977
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1014573219977
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1014573219977
+      \endverb
+    \endentry
+    \entry{Taniai2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4c7799b72500b3592ae8ec0aaa301d04}{%
+           family={Taniai},
+           familyi={T\bibinitperiod},
+           given={Tatsunori},
+           giveni={T\bibinitperiod}}}%
+        {{hash=678bdc85f6769e200ac624fd3330f489}{%
+           family={Matsushita},
+           familyi={M\bibinitperiod},
+           given={Yasuyuki},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e292ab2afea048f7ad6399d6b3301f67}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={Yoichi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bb5d85ecc9acb2d4a7aea66dd0402158}{%
+           family={Naemura},
+           familyi={N\bibinitperiod},
+           given={Takeshi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c1f838fe2ce735e067452d940c2ed1f}
+      \strng{fullhash}{f8135b8a1cf7b758ab38e789a74d0b3c}
+      \strng{bibnamehash}{f8135b8a1cf7b758ab38e789a74d0b3c}
+      \strng{authorbibnamehash}{f8135b8a1cf7b758ab38e789a74d0b3c}
+      \strng{authornamehash}{1c1f838fe2ce735e067452d940c2ed1f}
+      \strng{authorfullhash}{f8135b8a1cf7b758ab38e789a74d0b3c}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Continuous Stereo Matching using Local Expansion Moves}
+      \field{volume}{abs/1603.08328}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1603.08328
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1603.08328
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1603.08328
+      \endverb
+    \endentry
+    \entry{Wadhwa2018}{article}{}
+      \name{author}{10}{}{%
+        {{hash=61fc75b9a9b3059849d2eab56cba1dc2}{%
+           family={Wadhwa},
+           familyi={W\bibinitperiod},
+           given={Neal},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dee88d7f56cdc1574a53c51b6ceec8ca}{%
+           family={Garg},
+           familyi={G\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2644c866790a8ad9360e09b2314c02b9}{%
+           family={Jacobs},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d476dc62acf131a5b2de32fb6ca9a61f}{%
+           family={Feldman},
+           familyi={F\bibinitperiod},
+           given={Bryan\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=bce1a53c7b32366f26f02e8729215aea}{%
+           family={Kanazawa},
+           familyi={K\bibinitperiod},
+           given={Nori},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3fe413b2b3f339b68184f95a7f51eedc}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=674ae95519e46cf653df616e84549521}{%
+           family={Movshovitz-Attias},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Yair},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4ef9d5fb0962f22456e4c8ea6910659a}{%
+           family={Barron},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=431bc98a2ac62901ba9d38297e19b25e}{%
+           family={Pritch},
+           familyi={P\bibinitperiod},
+           given={Yael},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1315bf00f5fa82534be18df443fc255c}{%
+           family={Levoy},
+           familyi={L\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{c1fa82f75a13540df8ec36a0c6816a2d}
+      \strng{fullhash}{53cc276a34e367e2ad0bc448f95d7d3a}
+      \strng{bibnamehash}{53cc276a34e367e2ad0bc448f95d7d3a}
+      \strng{authorbibnamehash}{53cc276a34e367e2ad0bc448f95d7d3a}
+      \strng{authornamehash}{c1fa82f75a13540df8ec36a0c6816a2d}
+      \strng{authorfullhash}{53cc276a34e367e2ad0bc448f95d7d3a}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \true{uniquework}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0730-0301}
+      \field{journaltitle}{ACM Trans. Graph.}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{Synthetic Depth-of-field with a Single-camera Mobile Phone}
+      \field{volume}{37}
+      \field{year}{2018}
+      \field{pages}{64:1\bibrangedash 64:13}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3197517.3201329
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/3197517.3201329
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/3197517.3201329
+      \endverb
+      \keyw{defocus,depth-of-field,segmentation,stereo}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
