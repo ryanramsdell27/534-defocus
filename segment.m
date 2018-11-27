@@ -1,9 +1,9 @@
-function depthMap = segment(image,face)
-image = imresize(image, [300 NaN]);
-
+function segMap = segment(image,face)
+image = imresize(image, [450 NaN]);
 img = double(image);%rgb2lab(image);
+img = rgb2lab(image);
 % compute k-means segmentation on the image
-k = 10;
+k = 6;
 img_y = size(img,1);
 img_x = size(img,2);
 
@@ -13,7 +13,8 @@ img = cat(3,img, y_val);
 img = cat(3,img, x_val);
 img_z = size(img,3);
 
-img_size = numel(img);
+img_size = numel(img); % Delete??
+
 centroid_index = randperm(img_y*img_x, k);
 centroids = zeros(img_z, k);
 for z = 1:k
@@ -22,13 +23,20 @@ for z = 1:k
     center = squeeze(center);
     centroids(:,z) = center;
 end
-feature_dist = zeros(img_y, img_x,k);
+face_center  = img(face(1),face(2),:);
+face_center = squeeze(face_center);
+centroids(:,1) = face_center;
 
-for iter = 1:10
+feature_dist = zeros(img_y, img_x,k);
+old_centroids = zeros(size(centroids));
+max_iters = 100;
+iters = 0;
+while ~converge(centroids, old_centroids) && iters < max_iters
+old_centroids = centroids;
 for y = 1:img_y
     for x = 1:img_x
         pt = img(y,x,:);
-        pt = squeeze(pt);%reshape(pt,1,5);
+        pt = squeeze(pt);
         for z = 1:k
             center = centroids(:,z);
             feature_dist(y,x,z) = distance(pt, center);
@@ -45,11 +53,38 @@ for z = 1:k
     centroid = centroid / numel(u);
     centroids(:,z) = centroid;    
 end
+iters = iters + 1;
 end
 [A,I] = min(feature_dist, [], 3);
-depthMap = I;
+segMap = I;
+end
 
+function dist = distance(x,y)
+weight = [4,3,3,1,1]';%[10,5,8,1,1]';
+x = x .* weight;
+y = y .* weight;
+% Euclidian
+dist = sqrt(sum((x-y).^2));
+% Taxicab/L1
+% dist = sum(abs(x-y)); 
 
+% British rail
+% epsilon = 0.1;
+% feat = x ./ y;
+% if(all(feat-feat(1) < epsilon))
+%     dist = sum(sqrt(x.^2 + y.^2));
+% else
+%     dist = sqrt(sum((x-y).^2));
+% end
+end
+
+function converged = converge(centroids, old_centroids)
+diff = abs(centroids - old_centroids);
+metric = sum(sum(diff(end-1:end, :))) / numel(diff)
+converged = metric < 0.1;
+end
+
+function segMap = meanshift(image, face)
 % red = image(:,:,1);
 % green = image(:,:,2);
 % blue = image(:,:,3);
@@ -86,20 +121,3 @@ depthMap = I;
 % end
 
 end
-
-function dist = distance(x,y)
-% Euclidian
-% dist = sqrt(sum((x-y).^2));
-% Taxicab/L1
-% dist = sum(abs(x-y)); 
-
-% British rail
-epsilon = 0.1;
-feat = x ./ y;
-if(all(feat-feat(1) < epsilon))
-    dist = sum(sqrt(x.^2 + y.^2));
-else
-    dist = sqrt(sum((x-y).^2));
-end
-end
-
