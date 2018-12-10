@@ -1,5 +1,5 @@
 function segMap = segment(image,face)
-image = imresize(image, [450 NaN]);
+% image = imresize(image, [450 NaN]);
 img = double(image);%rgb2lab(image);
 img = rgb2lab(image);
 % compute k-means segmentation on the image

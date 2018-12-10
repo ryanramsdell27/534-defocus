@@ -8,13 +8,13 @@ function img_out = defocus(img,img_depth)
 %imshow(img_depth);
 fg = min(min(img_depth));
 bg = max(max(img_depth));
-
+max_blur = 10;
 img_out = uint16(zeros(size(img)));
 for depth = bg:-1:fg
     mask = uint8(img_depth == depth);%(img_depth<depth)-(img_depth>=depth-32));
     composite_layer = img.*mask;
-    focal_plane = 38;
-    sigma = distance(focal_plane, depth, bg, 10);
+    focal_plane = 0;
+    sigma = distance(focal_plane, depth, bg, max_blur);
     %blurred_layer = disk_blur(composite_layer, depth, focal_plane);
     blurred_layer = imgaussfilt(composite_layer, sigma); % implement a distance function from plane of focus
     %imshow(blurred_layer);
