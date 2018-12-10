@@ -20,11 +20,10 @@ segs = img_seg(face(1),face(2));
 focal_plane = ismember(img_seg,segs);
 se = strel('disk', 10);
 focal_plane = imclose(focal_plane, se);
-% imshow([img_seg,255.*focal_plane]);
 focal_plane = uint8(1-focal_plane);
 
 gradient = (img_x:-1:1)'/(30*img_x);
-gradient = uint8(255*gradient/max(max(gradient)));
+gradient = uint8(254*gradient/max(max(gradient))+1);
 img_depth = focal_plane.*gradient;
 end
 

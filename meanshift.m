@@ -2,6 +2,7 @@ function segMap = meanshift(image,face,bandwidth)
 % bandwidth = 0.1; % make this a parameter
 % img = rgb2lab(image);
 img = rgb2lab(image);
+% Normalize values to [0,1]
 for i = 1:3
     max_val = max(max(img(:,:,i)));
     min_val = min(min(img(:,:,i)));
@@ -15,8 +16,7 @@ x_val = ones(1,img_y)' .* (1:img_x);
 y_val = ones(1,img_x) .* (1:img_y)';
 img = cat(3,img, y_val/img_y); % add y values and normalize to [0,1]
 img = cat(3,img, x_val/img_x); % add x values and normalize to [0,1]
-% img = cat(3, img, zeros(img_y, img_x));
-img_z = size(img,3);
+img_z = size(img,3); % This is the dimension of the feature space
 
 % Run mean-shift on data
 num_clusters = 0;
