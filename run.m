@@ -1,48 +1,39 @@
+clear
+clc
+%% Load image
+fprintf('Loading image\n');
+img = imread('pics/5.jpg');
+ratio = 1000/size(img,1);
+[x,y,z] = size(img);
+img = imresize(img, [x,y]*ratio );
+
+
+%% Find face features
+fprintf('Finding face features\n');
+face = [308,332];%[433, 343];%[164,223];
+leye = [300,302];%[390, 310];%[145,216];
+reye = [356,301];%[475, 301];%[177,216];
+% detectFace(img);
 %% Segment
-
-img = imread('person.jpg');
-face = [162,151];
-
-% for x = 1:10
-img_s = meanshift(img, face,0.1);
-img_lab = label2rgb(img_s);
-% f1=figure;
-se = offsetstrel('ball',2,2);
-img_seg = imerode(uint8(img_s / max(max(img_s)) * 255),se);
-% imwrite(img_seg,'img_seg.jpg');
-
-% hold on;
-% scatter(109,228);
-% imwrite(img_lab, strcat('output/british_rail', num2str(x),'.jpg'));
-% end
-% imshow(img_s);
+fprintf('Segmenting image\n');
+img_seg = meanshift(img, face,0.2); % segmented image
+img_lab = label2rgb(img_seg); % rgb labeled imaged for debugging
+img_seg = uint8(img_seg / max(max(img_seg)) * 255); % map to uint8
+se = offsetstrel('ball',2,2); % structuring element used in image erosion
+img_seg = imerode(img_seg,se);
 
 %% Generate Depth Map
-% img_seg = imread('img_seg.jpg');
-face = [164,223];
-leye = [145,216];
-reye = [177,216];
+fprintf('Generating depth map\n');
 img_depth = generateDepth(img_seg, face, leye, reye);
-
-img = imread('person.jpg');
-% img = imresize(img, [450 NaN]);
+img_depth = imgaussfilt(img_depth, 4);
+% imshow(img_depth);
 
 %% Blur
-% img = imread('im0.png');
-% img_depth = imread('im.pgm');
-% [img_depth, sf] = parsePfm('disp0.pfm');
-% img_depth = imcomplement(img_depth*sf);
-% %img_depth = img_depth*255/max(max(img_depth));
-% img_depth = im2uint8(img_depth);
-% img_depth(img_depth==0)=255;
-% %imshow(img_depth);
+fprintf('Blurring image\n');
+
 imgr = img(:,:,1);
 imgg = img(:,:,2);
 imgb = img(:,:,3);
-
-%img_depthr = img_depth(:,:,1);
-%img_depthg = img_depth(:,:,1);
-%img_depthb = img_depth(:,:,1);
 
 outr = defocus(imgr, img_depth);
 outg = defocus(imgg, img_depth);
@@ -53,5 +44,11 @@ out(:,:,1) = outr;
 out(:,:,2) = outg;
 out(:,:,3) = outb;
 
-imshow(out);
+out = out+20;
+img_d = cat(3, img_depth, img_depth, img_depth);
+composite = [img, img_lab,img_d, out];
+imshow(composite);
+%% Clean
+clear imgb imgg imgr leye reye se x y z outb outg outr face ratio img_d
+
 % imwrite(out, 'render2.png');

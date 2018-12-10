@@ -1,8 +1,14 @@
 function segMap = meanshift(image,face,bandwidth)
 % bandwidth = 0.1; % make this a parameter
 % img = rgb2lab(image);
-img = im2double(image);
-% Set up the feature space where each pixel has 5 values: r, g, b, x, and y
+img = rgb2lab(image);
+for i = 1:3
+    max_val = max(max(img(:,:,i)));
+    min_val = min(min(img(:,:,i)));
+    img(:,:,i) = (img(:,:,i)-min_val)/(max_val - min_val);
+end
+
+% Set up the feature space where each pixel has 5 values: L, a, b, x, and y
 img_y = size(img,1);
 img_x = size(img,2);
 x_val = ones(1,img_y)' .* (1:img_x);
@@ -70,7 +76,7 @@ end
 [a,segMap]= max(votes,[],1);
 segMap = reshape(segMap,img_y, img_x);
 out = label2rgb(segMap);
-imshow(out);
+% imshow(out);
 % sum(b)
 end
 
