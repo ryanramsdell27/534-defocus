@@ -23,7 +23,7 @@ focal_plane = imclose(focal_plane, se);
 focal_plane = uint8(1-focal_plane);
 
 gradient = (img_x:-1:1)'/(30*img_x);
-gradient = uint8(254*gradient/max(max(gradient))+1);
+gradient = uint8(255*gradient/max(max(gradient)));
 img_depth = focal_plane.*gradient;
 end
 

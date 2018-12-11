@@ -1,4 +1,4 @@
-function img_out = defocus(img,img_depth, max_blur)
+function img_out = defocus(img,img_depth, max_blur, focal_plane)
 %Defocus an image
 %   Uses depth map to calculate amount of defocus. Assumes an 8bit depth
 %   map.
@@ -6,15 +6,13 @@ function img_out = defocus(img,img_depth, max_blur)
 fg = min(min(img_depth));
 bg = max(max(img_depth));
 img_out = uint16(zeros(size(img)));
-focal_plane = 0; % Assumes that the subject is the closest object
 for depth = bg:-1:fg
     mask = double(img_depth == depth);%(img_depth<depth)-(img_depth>=depth-32));
     mask = imgaussfilt(mask, max_blur);
 %     imshow(mask);
     composite_layer = im2uint8(im2double(img).*mask);
-    focal_plane = 0;
     sigma = distance(focal_plane, depth, bg, max_blur);
-    blurred_layer = disk_blur(composite_layer, depth, focal_plane);
+    blurred_layer = disk_blur(composite_layer, depth, focal_plane, max_blur);
 %     blurred_layer = imgaussfilt(composite_layer, sigma); % implement a distance function from plane of focus
     %img_out = uint16(1-mask).*(uint16(blurred_layer) + img_out) + uint16(composite_layer);
     img_out = uint16(blurred_layer) + img_out;
@@ -30,8 +28,8 @@ function sigma = distance(focal_plane, depth, max_depth, max_blur)
 sigma = max_blur*abs(focal_plane - double(depth))/double(max_depth) + 0.1;
 end
 
-function out = disk_blur(composite_layer, depth, focal_plane)
-diameter = abs(double(focal_plane) - double(depth))*50/255;
+function out = disk_blur(composite_layer, depth, focal_plane, max_blur)
+diameter = abs(double(focal_plane) - double(depth))*5*max_blur/255;
 % [diameter, double(depth)];
 %kern = [0 0 1 1 0 0; 0 1 1 1 1 0; 1 1 1 1 1 1; 1 1 1 1 1 1; 0 1 1 1 1 0; 0 0 1 1 0 0];
 kern = gen_kern(diameter);
