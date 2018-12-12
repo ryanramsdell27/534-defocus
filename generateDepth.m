@@ -6,6 +6,9 @@ function img_depth = generateDepth(img_seg, face, leye, reye)
 [img_x, img_y] = size(img_seg);
 
 %% Select all indecies directly below face center and eyes
+face = double(face);
+leye = double(leye);
+reye = double(reye);
 face_index = face(2):img_x;
 leye_index = leye(2):img_x;
 reye_index = reye(2):img_x;
@@ -26,4 +29,3 @@ gradient = (img_x:-1:1)'/(30*img_x);
 gradient = uint8(255*gradient/max(max(gradient)));
 img_depth = focal_plane.*gradient;
 end
-
