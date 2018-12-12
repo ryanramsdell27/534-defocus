@@ -30,25 +30,6 @@ end
 
 function out = disk_blur(composite_layer, depth, focal_plane, max_blur)
 diameter = abs(double(focal_plane) - double(depth))*5*max_blur/255;
-% [diameter, double(depth)];
-%kern = [0 0 1 1 0 0; 0 1 1 1 1 0; 1 1 1 1 1 1; 1 1 1 1 1 1; 0 1 1 1 1 0; 0 0 1 1 0 0];
 kern = gen_kern(diameter);
 out = conv2(composite_layer, kern, 'same');
-% out = imgaussfilt(out,3);
-% imshow(out);
-end
-
-function out = disk_blur2(composite_layer, depth, focal_plane)
-diameter = abs(double(focal_plane) - double(depth))*50/255; % need to come up with a better mapping function
-kern = gen_kern(diameter);
-[img_x, img_y] = size(composite_layer);
-img_x = img_x + diameter;
-img_y = img_y + diameter;
-out = zeros(img_y, img_x);
-[x_vals,y_vals] = find(composite_layer > 0);
-for i = 1:size(x_vals,1)
-    x = x_vals(i);
-    y = y_vals(i);
-    % pad the kernel with zeros
-end
 end

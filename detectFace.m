@@ -7,7 +7,7 @@ I = img;
 
 % For Face
 faceDetect = vision.CascadeObjectDetector;
-bbFace = step(faceDetect, I)
+bbFace = step(faceDetect, I);
 
 faceDetect.MergeThreshold = 10;
 

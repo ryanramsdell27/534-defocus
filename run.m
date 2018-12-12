@@ -7,10 +7,10 @@ fprintf('Setting paramters\n');
 max_blur = 10;
 max_width = 1000;
 focal_plane = 0;
-depth_map_sigma = 20;
+depth_map_sigma = 15;
 ms_bandwidth = 0.2;
-img_path = 'pics/7.jpg';
-% 5.jpg : max_blur = 10; max_width = 1000; depth_map_sigma=20; ms_bandwidth=0.3; img_path = 'pics/5.jpg';
+img_path = 'pics/3.jpg';
+
 %% Load image
 fprintf('Loading image\n');
 img = imread(img_path);
@@ -21,13 +21,10 @@ img = imresize(img, [x,y]*ratio );
 
 %% Find face features
 fprintf('Finding face features\n');
-%face = [435,311];%5.jpg:[308,332];
-%leye = [1 1];% 5.jpg:[300,302];
-%reye = [1 1];% 5.jpg:[356,301];
 [f,eyes] = detectFace(img);
-face = [f(1),f(2)]
-leye = [eyes(1),eyes(3)]
-reye = [eyes(2), eyes(3)]
+face = [f(1),f(2)];
+leye = [eyes(1),eyes(3)];
+reye = [eyes(2), eyes(3)];
 %% Segment
 fprintf('Segmenting image\n');
 img_seg = meanshift(img, face,ms_bandwidth); % segmented image
@@ -40,7 +37,6 @@ img_seg = imerode(img_seg,se);
 fprintf('Generating depth map\n');
 img_depth = generateDepth(img_seg, face, leye, reye);
 img_depth = imgaussfilt(img_depth, depth_map_sigma);
-% imshow(img_depth);
 
 %% Blur
 fprintf('Blurring image\n');
@@ -63,6 +59,8 @@ img_d = cat(3, img_depth, img_depth, img_depth);
 composite = [img, img_lab,img_d, out];
 imshow(composite);
 %% Clean
-clear imgb imgg imgr se x y z outb outg outr ratio img_d depth_map_sigma max_blur max_width ms_bandwidth
+imwrite(composite,'out/3composite.jpg');
+imwrite(out, 'out/3out.jpg');
+% clear imgb imgg imgr se x y z outb outg outr ratio img_d depth_map_sigma max_blur max_width ms_bandwidth
 
 % imwrite(out, 'render2.png');
