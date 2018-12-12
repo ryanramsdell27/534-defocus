@@ -284,7 +284,9 @@ need for costly hardware systems.
     <div id = "implementation">
       <h4> Implementation </h4>
       <p id = "imp-content">
-      Our approach will use the segmentation technique given by Wadhwa et al.15 as it is most adaptable to any imaging system which aligns with our general goal of being a hardware independent system. We are researching the ability to use Haar feature search and either mean-shift or graph based image segmentation to separate a human subject from the back- ground of an image. The Haar algorithm would find the human subject and we intend to adjust the segmentation parameters so that the face we’ve recognized stays in one segment. After segmentation we will rely on reasonable assumptions about image composition that should more in most cases. Namely that the human subject will be in the foreground and that all other parts will be behind the subject. In addition, the if we have segments that are at different vertical heights along the image, the ones closer to the top will be assumed to be further from the camera as is true with a distant horizon or sky. Segmentation is limited in how many objects it can discern so we will also use Gaussian interpolation as suggested by Nayar et al.16 as a way of increasing the depth-resolution. If time permits we may explore additional depth-map calculation techniques like depth from focus/defocus with images gathered from short video segments with changing focus or implementing an algorithm to gather depth from stereo.
+      Our approach will use the segmentation technique given by Wadhwa et al.15 as it is most adaptable to any imaging system which aligns with our general goal of being a hardware independent system. We use a Viola-Jones algorithm based on Haar feature to locate faces mean-shift image segmentation to separate a human subject from the background of an image. The mean-shift segmentation is over a five dimensional feature space composed of the L*a*b colorspace and spacial coordinates. After segmentation we will rely on reasonable assumptions about image composition that should more in most cases. Namely that the human subject will be in the foreground and that all other parts will be behind the subject. In addition, if we have segments that are at different vertical heights along the image, the ones closer to the top will be assumed to be further from the camera as is true with a distant horizon or sky. Segmentation is limited in how many objects it can discern so we will also use Gaussian interpolation as suggested by Nayar et al.16 as a way of increasing the depth-resolution. Finally the image is blurred for each depth in the generated depth-map and stacked into a final composited image. This blurring technique employs a convolutional filter with a dynamically generated kernel based on depth value.
+      <br><br>
+      Our system is completely modular in that the subject detection, segmentation, depth map generation, and blurring all occur independent of one another. This gives the user flexibility in how an image is processed and what the final results will look like. It opens the field for a wide range of other applications. Switching the face-recognition step with another object detection system (i.e. trainign a neural network to detect dogs) would allow the system to produce quality blurred photos of non-human subject. Additional depth-map calculation techniques like depth from focus/defocus with images gathered from short video segments with changing focus or implementing an algorithm to gather depth from stereo can be used to increase the accuracy and precision of the depth map. The blur kernel generator can be adjusted to produce non-circular bokeh in the final image.
       </p>
     </div>
     <div id = "results">
@@ -306,17 +308,47 @@ need for costly hardware systems.
     font-size: 20px;
     font-weight: lighter;
     text-transform: uppercase;"> After </h6>
-        <img src = "img/2.jpg" style = "    max-width: 300px;
+        <img src = "img/5.jpg" style = "    max-width: 300px;
     position: relative;
     border-radius: 5px;
     left: 50px;"/>
-        <img src = "img/2comp.jpg" style = "max-width: 300px;
+        <img src = "img/5out.jpg" style = "max-width: 300px;
     position: relative;
     float: right;
     right: 400px;
     border-radius: 5px;
 "/>
+      <div>
+      <img src = "img/3composite.jpg" style = "max-width: 1000px;
+      position: relative;
+      float: inherit;
+      top: 15px;
+      bottom: 15px;
+      border-radius: 5px;
+      "/>
+
+      <img src = "img/8composite.jpg" style = "max-width: 1000px;
+      position: relative;
+      float: inherit;
+      top: 15px;
+      border-radius: 5px;
+      "/>
       </div>
+
+      <h6 style = "    float: right;
+  position: relative;
+  color: white;
+  right: 575px;
+  font-size: 20px;
+  font-weight: lighter;
+  text-transform: uppercase;"> A comparison with Google's portrait mode (original image, Google, Ours)</h6>
+
+      <img src = "img/8comparison.jpg" style = "max-width: 1000px;
+      position: relative;
+      float: inherit;
+      top: 15px;
+      border-radius: 5px;
+      "/>
 
       <h6  style =" position: relative;
       left: 100px;
@@ -329,6 +361,10 @@ need for costly hardware systems.
       <p> One of the main problems we faced was with the facial recognition system that we had in
         place was not working totally correct.  In fixing this, we decided to use images that contained
         less features in the background making it less difficult for the recognition system to pick up valid data.
+
+        Noisy pictures also led to issues with the image segmentation. Initially our approach used a k-means segmentation algorithm but the results were not desirable with busy backgrounds and we switched to a mean-shift algorithm instead.
+        In generating depth map from the segmented image and face data our approach assumed that any segments directly below the eyes and face center would be part of the torso. This naive approach to selecting the body created a lot of false positives and produced an inaccurate depth-map.
+
       </p>
 
 
