@@ -9,7 +9,7 @@ max_width = 1000;
 focal_plane = 0;
 depth_map_sigma = 15;
 ms_bandwidth = 0.2;
-img_path = 'pics/3.jpg';
+img_path = 'pics/5.jpg';
 
 %% Load image
 fprintf('Loading image\n');
@@ -22,7 +22,7 @@ img = imresize(img, [x,y]*ratio );
 %% Find face features
 fprintf('Finding face features\n');
 [f,eyes] = detectFace(img);
-face = [f(1),f(2)];
+face = [f(1),f(3)];
 leye = [eyes(1),eyes(3)];
 reye = [eyes(2), eyes(3)];
 %% Segment
