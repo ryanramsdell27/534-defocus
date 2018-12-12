@@ -6,10 +6,10 @@ clc
 fprintf('Setting paramters\n');
 max_blur = 10;
 max_width = 1000;
+focal_plane = 0;
 depth_map_sigma = 20;
 ms_bandwidth = 0.2;
-img_path = 'pics/3.jpg';
-focal_plane = 0;
+img_path = 'pics/7.jpg';
 % 5.jpg : max_blur = 10; max_width = 1000; depth_map_sigma=20; ms_bandwidth=0.3; img_path = 'pics/5.jpg';
 %% Load image
 fprintf('Loading image\n');
@@ -18,12 +18,16 @@ ratio = max_width/size(img,1);
 [x,y,z] = size(img);
 img = imresize(img, [x,y]*ratio );
 
+
 %% Find face features
 fprintf('Finding face features\n');
-face = [265,435];%5.jpg:[308,332];
-leye = [1 1];% 5.jpg:[300,302];
-reye = [1 1];% 5.jpg:[356,301];
-% [face,eyepos] = detectFace(img)
+%face = [435,311];%5.jpg:[308,332];
+%leye = [1 1];% 5.jpg:[300,302];
+%reye = [1 1];% 5.jpg:[356,301];
+[f,eyes] = detectFace(img);
+face = [f(1),f(2)]
+leye = [eyes(1),eyes(3)]
+reye = [eyes(2), eyes(3)]
 %% Segment
 fprintf('Segmenting image\n');
 img_seg = meanshift(img, face,ms_bandwidth); % segmented image
@@ -45,9 +49,9 @@ imgr = img(:,:,1);
 imgg = img(:,:,2);
 imgb = img(:,:,3);
 
-outr = defocus(imgr, img_depth, max_blur, focal_plane);
-outg = defocus(imgg, img_depth, max_blur, focal_plane);
-outb = defocus(imgb, img_depth, max_blur, focal_plane);
+outr = defocus(imgr, img_depth, max_blur,focal_plane);
+outg = defocus(imgg, img_depth, max_blur,focal_plane);
+outb = defocus(imgb, img_depth, max_blur,focal_plane);
 
 out = im2uint8(zeros(size(img)));
 out(:,:,1) = outr;
