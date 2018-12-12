@@ -1,0 +1,390 @@
+<doctype html>
+
+<head>
+  <title> Simulated Depth of Field </title>
+</head>
+<style>
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: white;
+  font-size: 12pt;
+  font-weight: 100;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: -webkit-linear-gradient(left, #3c96ff 0%, #2dfbff 100%) !important;
+background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%) !important;
+box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+}
+li {
+  margin-left: auto;
+  margin-right: auto;
+  width: 16.666666%;
+  float: left;
+}
+
+h4 {
+  margin-left: auto;
+  margin-right: auto;
+}
+li a {
+  display: block;
+color: white;
+text-align: center;
+padding: 25px 25px;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: 200;
+text-indent: 10px;
+}
+
+li a:hover {
+  background-color: #3c96ff;
+}
+img{
+  max-width: 1000px;
+  max-height: 500px;
+}
+#home {
+  padding: 30px;
+  font-size: 25px;
+  font-weight: lighter;
+  height:300px;
+  bbackground-color: #2dfbff;
+  margin-left: auto;
+  margin-right: suto;
+  background-image: -webkit-linear-gradient(bottom right, #4DD0E1, #0D47A1);
+
+}
+#home h2 {
+  line-height: 1;
+  color: white;
+  font-weight: 100;
+  font-size: 30pt;
+  position: relative;
+  text-transform: uppercase;
+}
+#home h6 {
+  line-height: 1;
+  color: white;
+  font-weight: 100;
+  font-size: 15pt;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#motivation {
+  padding-top: 30px;
+  padding-bottom: 45px;
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#motivation p    {
+    padding: 15px;
+    background: white;
+
+    color: #002f73;
+    position: relative;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+  #motivation h4{
+    text-align: center;
+    width: 300px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #2066ce;
+    padding: 10px;
+    font-weight: 300;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+#approach {
+    background-image: -webkit-linear-gradient(bottom right, #4DD0E1, #0D47A1);
+    padding-top: 30px;
+    border-radius: 5px;
+    padding-bottom: 45px;
+}
+
+#approach h4 {
+  color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    width: 300px;
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#approach p{
+  padding: 15px;
+line-height: 1.7;
+color: white;
+font-weight: 100;
+position: relative;
+left: 25px;
+}
+
+#implementation {
+  padding-top: 30px;
+  padding-bottom: 45px;
+  border-radius: 5px;
+}
+
+#implementation p {
+  padding: 15px;
+  background: white;
+  color: #002f73;
+  position: relative;
+  line-height: 1.7;
+  font-weight: 100;
+}
+
+#implementation h4{
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #2066ce;
+  padding: 10px;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#results {
+    background-image: -webkit-linear-gradient(bottom right, #4DD0E1, #0D47A1);
+    padding-top: 30px;
+    padding-bottom: 45px;
+    border-radius: 5px;
+}
+
+#results h4 {
+  color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    width: 300px;
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#results p{
+  padding: 15px;
+line-height: 1.7;
+color: white;
+font-weight: 100;
+position: relative;
+}
+
+#results h6 {
+line-height: 1;
+color: white;
+font-weight: 100;
+font-size: 20pt;
+position: relative;
+
+text-align: center;
+text-transform: uppercase;
+
+}
+
+#download {
+  padding: 40px;
+  padding-bottom:20px;
+}
+
+#download h4 {
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #2066ce;
+  padding: 10px;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+}
+#download a {
+text-align: center;
+line-height: 1;
+color: #2066ce;
+font-weight: 100;
+font-size: 20pt;
+text-transform: uppercase;
+}
+.column {
+  float: left;
+  width: 49%;
+  padding: 5px;
+  margin: auto;
+
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+</style>
+
+
+<body>
+  <div id = "home-img">
+    <img src ="img/img_depth.png"
+    style = " max-width: 400px;
+    float: right;
+    right: 100px;
+    position: relative;
+    top: 80px;
+    border-radius:3px;
+  " >
+  </div>
+  <div id = "home">
+    <h2> Simulated Depth of Field </h2>
+    <h6> Ryan Ramsdell, Devesh Sullivan </h6>
+  </div>
+
+
+  <div id = "navigation" style ="background-color: #0D47A1">
+    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+          <div id="navbarCollapse">
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#home" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#motivation " >Motivation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#approach" >Approach</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#implementation">Implementation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#results">Results</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#download">Code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id = "motivation">
+      <h4> Motivation </h4>
+      <p id = "mot-content">
+        Camera systems embedded in many consumer electronics like cell phones are generally smaller
+than traditional options. This reduced size in optics and sensor size puts limitations of the
+effective depth of field achievable, in result many of these systems are designed with a wider
+depth of field. Depth of field is critical in the artistic value of an image as it can be used
+as a powerful compositional tool in highlighting the subject matter or conversely obscuring
+unwanted parts of the image scene.
+      </p>
+    </div>
+
+    <div id = "approach">
+      <h4> Approach </h4>
+      <p id  = "approach-content">
+        In attacking this problem we will initially restrict ourselves to an image domain with
+human subjects. The rationale being that selfies and portraits make for a large share of
+images taken today. With an increasingly connected society the issue of having a strong and
+reputable social media presence has become even more common. Our intention is to address
+the matter of resource access inequality (i.e., having a quality camera or ability to hire
+professional photographers) by implementing a solution that requires minimal hardware or
+effort in the image capture phase but still produces quality results comparable to professional
+images. Additionally, in implementing a software solution to this problem we eliminate the
+need for costly hardware systems.
+      </p>
+    </div>
+
+    <div id = "implementation">
+      <h4> Implementation </h4>
+      <p id = "imp-content">
+      Our approach will use the segmentation technique given by Wadhwa et al.15 as it is most adaptable to any imaging system which aligns with our general goal of being a hardware independent system. We use a Viola-Jones algorithm based on Haar feature to locate faces mean-shift image segmentation to separate a human subject from the background of an image. The mean-shift segmentation is over a five dimensional feature space composed of the L*a*b colorspace and spacial coordinates. After segmentation we will rely on reasonable assumptions about image composition that should more in most cases. Namely that the human subject will be in the foreground and that all other parts will be behind the subject. In addition, if we have segments that are at different vertical heights along the image, the ones closer to the top will be assumed to be further from the camera as is true with a distant horizon or sky. Segmentation is limited in how many objects it can discern so we will also use Gaussian interpolation as suggested by Nayar et al. as a way of increasing the depth-resolution. Finally the image is blurred for each depth in the generated depth-map and stacked into a final composited image. This blurring technique employs a convolutional filter with a dynamically generated kernel based on depth value.
+      <br><br>
+      Our system is completely modular in that the subject detection, segmentation, depth map generation, and blurring all occur independent of one another. This gives the user flexibility in how an image is processed and what the final results will look like. It opens the field for a wide range of other applications. Switching the face-recognition step with another object detection system (i.e. training a neural network to detect dogs) would allow the system to produce quality blurred photos of non-human subject. Additional depth-map calculation techniques like depth from focus/defocus with images gathered from short video segments with changing focus or implementing an algorithm to gather depth from stereo can be used to increase the accuracy and precision of the depth map. The blur kernel generator can be adjusted to produce non-circular bokeh in the final image.
+      </p>
+    </div>
+
+    <div id = "results" >
+      <h4> Results </h4>
+      <center>
+
+      <div class="row">
+        <div class="column">
+          <h6> Before </h6>
+        </div>
+        <div class="column">
+          <h6> After </h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/5.jpg" alt="Original">
+        </div>
+]        <div class="column">
+          <img src="img/5out.jpg" alt="Output">
+        </div>
+      </div>
+
+      <div>
+        <img src = "img/3composite.jpg" >
+        <br>
+        <img src = "img/8composite.jpg"
+      </div>
+      </center>
+<br>
+
+
+      <h6> A comparison with Google's portrait mode</h6>
+
+      <center><img src = "img/8comparison.jpg"/></center>
+      <p>The images presented from left to right are as follows: the original unedited photo, the output by Google's portrait mode, the output from our apporach. As you can see, Google's portrait mode was more conservative in what it chose to defocus, the most noticible effects being the branches near the bottom of the photo and the wooden trim on the right of the image. Our approach is more aggresive and has mostly just the intended subject in focus. It does, however, produce some strange horizontal artifacts possibly due to the blur kernel used but more research needs to be done on that front.</p>
+
+      <h6> Problems Faced </h6>
+
+      <p> One of the main problems we faced was that the facial recognition system we had in
+        place was not working totally correct.  In fixing this, we decided to use images that contained
+        fewer features in the background making it less difficult for the recognition system to pick up valid data.
+
+        Noisy pictures also led to issues with the image segmentation. Initially our approach used a k-means segmentation algorithm but the results were not desirable with busy backgrounds and we switched to a mean-shift algorithm instead.
+        In generating a depth map from the segmented image and face data our approach assumed that any segments directly below the eyes and face center would be part of the torso. This naïve approach to selecting the body created a lot of false positives and produced an inaccurate depth-map.
+
+      </p>
+
+
+    </div>
+
+    <div id = "download">
+      <h4> Download Code Below </h4>
+      <center>
+        <a href = "https://github.com/ryanramsdell27/534-defocus">Click to redirect to Github </a>
+      <br>
+      <a href = "paper.pdf">Click for our paper with references</a>
+      </center>
+    </div>
+
+  </body>

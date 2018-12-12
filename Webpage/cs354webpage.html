@@ -267,6 +267,7 @@ as a powerful compositional tool in highlighting the subject matter or conversel
 unwanted parts of the image scene.
       </p>
     </div>
+
     <div id = "approach">
       <h4> Approach </h4>
       <p id  = "approach-content">
@@ -281,14 +282,16 @@ images. Additionally, in implementing a software solution to this problem we eli
 need for costly hardware systems.
       </p>
     </div>
+
     <div id = "implementation">
       <h4> Implementation </h4>
       <p id = "imp-content">
-      Our approach will use the segmentation technique given by Wadhwa et al.15 as it is most adaptable to any imaging system which aligns with our general goal of being a hardware independent system. We use a Viola-Jones algorithm based on Haar feature to locate faces mean-shift image segmentation to separate a human subject from the background of an image. The mean-shift segmentation is over a five dimensional feature space composed of the L*a*b colorspace and spacial coordinates. After segmentation we will rely on reasonable assumptions about image composition that should more in most cases. Namely that the human subject will be in the foreground and that all other parts will be behind the subject. In addition, if we have segments that are at different vertical heights along the image, the ones closer to the top will be assumed to be further from the camera as is true with a distant horizon or sky. Segmentation is limited in how many objects it can discern so we will also use Gaussian interpolation as suggested by Nayar et al.16 as a way of increasing the depth-resolution. Finally the image is blurred for each depth in the generated depth-map and stacked into a final composited image. This blurring technique employs a convolutional filter with a dynamically generated kernel based on depth value.
+      Our approach will use the segmentation technique given by Wadhwa et al.15 as it is most adaptable to any imaging system which aligns with our general goal of being a hardware independent system. We use a Viola-Jones algorithm based on Haar feature to locate faces mean-shift image segmentation to separate a human subject from the background of an image. The mean-shift segmentation is over a five dimensional feature space composed of the L*a*b colorspace and spacial coordinates. After segmentation we will rely on reasonable assumptions about image composition that should more in most cases. Namely that the human subject will be in the foreground and that all other parts will be behind the subject. In addition, if we have segments that are at different vertical heights along the image, the ones closer to the top will be assumed to be further from the camera as is true with a distant horizon or sky. Segmentation is limited in how many objects it can discern so we will also use Gaussian interpolation as suggested by Nayar et al. as a way of increasing the depth-resolution. Finally the image is blurred for each depth in the generated depth-map and stacked into a final composited image. This blurring technique employs a convolutional filter with a dynamically generated kernel based on depth value.
       <br><br>
-      Our system is completely modular in that the subject detection, segmentation, depth map generation, and blurring all occur independent of one another. This gives the user flexibility in how an image is processed and what the final results will look like. It opens the field for a wide range of other applications. Switching the face-recognition step with another object detection system (i.e. trainign a neural network to detect dogs) would allow the system to produce quality blurred photos of non-human subject. Additional depth-map calculation techniques like depth from focus/defocus with images gathered from short video segments with changing focus or implementing an algorithm to gather depth from stereo can be used to increase the accuracy and precision of the depth map. The blur kernel generator can be adjusted to produce non-circular bokeh in the final image.
+      Our system is completely modular in that the subject detection, segmentation, depth map generation, and blurring all occur independent of one another. This gives the user flexibility in how an image is processed and what the final results will look like. It opens the field for a wide range of other applications. Switching the face-recognition step with another object detection system (i.e. training a neural network to detect dogs) would allow the system to produce quality blurred photos of non-human subject. Additional depth-map calculation techniques like depth from focus/defocus with images gathered from short video segments with changing focus or implementing an algorithm to gather depth from stereo can be used to increase the accuracy and precision of the depth map. The blur kernel generator can be adjusted to produce non-circular bokeh in the final image.
       </p>
     </div>
+
     <div id = "results">
       <h4> Results </h4>
       <div id = "images">
@@ -318,6 +321,7 @@ need for costly hardware systems.
     right: 400px;
     border-radius: 5px;
 "/>
+</div>
       <div>
       <img src = "img/3composite.jpg" style = "max-width: 1000px;
       position: relative;
@@ -335,20 +339,20 @@ need for costly hardware systems.
       "/>
       </div>
 
-      <h6 style = "    float: right;
+      <h6 style = "    float: inherit;
   position: relative;
   color: white;
-  right: 575px;
   font-size: 20px;
   font-weight: lighter;
-  text-transform: uppercase;"> A comparison with Google's portrait mode (original image, Google, Ours)</h6>
+  text-transform: uppercase;"> A comparison with Google's portrait mode</h6>
 
       <img src = "img/8comparison.jpg" style = "max-width: 1000px;
-      position: relative;
-      float: inherit;
-      top: 15px;
+      display: block;
+      mnargin-left: auto;
+      margin-right: auto;
       border-radius: 5px;
       "/>
+      <p>The images presented from left to right are as follows: the original unedited photo, the output by Google's portrait mode, the output from our apporach. As you can see, Google's portrait mode was more conservative in what it chose to defocus, the most noticible effects being the branches near the bottom of the photo and the wooden trim on the right of the image. Our approach is more aggresive and has mostly just the intended subject in focus. It does, however, produce some strange horizontal artifacts possibly due to the blur kernel used but more research needs to be done on that front.</p>
 
       <h6  style =" position: relative;
       left: 100px;
@@ -363,7 +367,7 @@ need for costly hardware systems.
         less features in the background making it less difficult for the recognition system to pick up valid data.
 
         Noisy pictures also led to issues with the image segmentation. Initially our approach used a k-means segmentation algorithm but the results were not desirable with busy backgrounds and we switched to a mean-shift algorithm instead.
-        In generating depth map from the segmented image and face data our approach assumed that any segments directly below the eyes and face center would be part of the torso. This naive approach to selecting the body created a lot of false positives and produced an inaccurate depth-map.
+        In generating a depth map from the segmented image and face data our approach assumed that any segments directly below the eyes and face center would be part of the torso. This naïve approach to selecting the body created a lot of false positives and produced an inaccurate depth-map.
 
       </p>
 
@@ -381,4 +385,13 @@ need for costly hardware systems.
     text-transform: uppercase;
     top: 30px;" href = "https://github.com/ryanramsdell27/534-defocus"> --> Click to redirect to Github </a>
     </div>
+    <a style = " color: #1a64d1;
+  position: relative;
+  left: 243px;
+  font-size: 20px;
+  padding-bottom: 100px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  top: 30px;" href = "paper.pdf">Click for our paper with references</a>
+  </div>
   </body>
